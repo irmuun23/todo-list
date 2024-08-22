@@ -1,0 +1,175 @@
+body {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 0;
+}
+
+#box {
+  background-color: rgb(248, 243, 225);
+  height: 50vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  gap: 5px;
+  padding: 10px;
+}
+#outputbox {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+}
+
+#group {
+  display: flex;
+  align-items: center;
+  max-width: 20vw;
+}
+#input {
+  width: 10vw;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+#input:focus,
+input:hover {
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+#output {
+  display: flex;
+  gap: 5px;
+  width: 25vw;
+  height: 4vh;
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 0 0 0 5px;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#todo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-wrap: wrap;
+}
+
+#add {
+  --color: rgba(0, 0, 0, 0.4);
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+#add::before,
+#add::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+#add::before {
+  top: -1em;
+  left: -1em;
+}
+#add::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+#add:hover::before,
+#add:hover::after {
+  height: 410px;
+  width: 410px;
+}
+#add:hover {
+  color: rgb(10, 25, 30);
+}
+#add:active {
+  filter: brightness(0.8);
+}
+
+.buttons {
+  --color: rgba(0, 0, 0, 0.4);
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+.buttons::before,
+.buttons::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+.buttons::before {
+  top: -1em;
+  left: -1em;
+}
+.buttons::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+.buttons:hover::before,
+.buttons:hover::after {
+  height: 410px;
+  width: 410px;
+}
+.buttons:hover {
+  color: rgb(10, 25, 30);
+}
+.buttons:active {
+  filter: brightness(0.8);
+}
