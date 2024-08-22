@@ -91,3 +91,4 @@ function add() {
 addBtn.addEventListener("click", function () {
   add();
 });
+console.log("test")
